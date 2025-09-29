@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Telefoningiz buzildi 😱</title>
+  <style>
+    body {
+      background: black;
+      color: red;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 40px;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    button {
+      margin-top: 50px;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      background: red;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚠ Telefoningiz buzildi! ⚠</h1>
+  <p>Endi uni faqat bitta tugma bosib tuzatishingiz mumkin...</p>
+  <button onclick="prank()">Tuzatish</button>
+
+  <script>
+    function prank() {
+      let i = 0;
+      setInterval(() => {
+        alert("😂 Hazil! Telefoningiz ishlayapti!");
+        i++;
+        if (i > 2) location.reload(); // 3 marta chiqaradi, keyin sahifa yangilanadi
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
